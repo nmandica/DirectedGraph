@@ -1,0 +1,31 @@
+{
+    "nodes": [
+        {"id": "A", "group": 1},
+        {"id": "B", "group": 2},
+        {"id": "C", "group": 2},
+        {"id": "D", "group": 2},
+        {"id": "E", "group": 2},
+        {"id": "F", "group": 2},
+        {"id": "G", "group": 2},
+        {"id": "G1", "group": 3},
+        {"id": "G2", "group": 3},
+        {"id": "G3", "group": 3},
+        {"id": "C1", "group": 3},
+        {"id": "C2", "group": 3},
+        {"id": "G31", "group": 4},
+    ],
+    "edges": [
+        {"source": "A", "target": "B", "value": 4},
+        {"source": "A", "target": "C", "value": 4},
+        {"source": "A", "target": "D", "value": 4},
+        {"source": "A", "target": "E", "value": 4},
+        {"source": "A", "target": "F", "value": 4},
+        {"source": "A", "target": "G", "value": 6},
+        {"source": "G", "target": "G1", "value": 4},
+        {"source": "G", "target": "G2", "value": 4},
+        {"source": "G", "target": "G3", "value": 4},
+        {"source": "C", "target": "C1", "value": 2},
+        {"source": "C", "target": "C2", "value": 2},
+        {"source": "G3", "target": "G31", "value": 4},
+    ]
+}
