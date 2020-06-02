@@ -1,5 +1,18 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=ae07b8708fcc71d2b4f9d120e56641bae2b0f6ed1d78fb99160bc21bdd904cfd
+    
 language: swift
 osx_image: xcode11.5
+install:
+  - gem install xcpretty
+  - gem install slather
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
 script:
-  - swift build
-  - swift test
+  - xcodebuild test -enableCodeCoverage YES -project DirectedGraph.xcodeproj -scheme DirectedGraph-Package | xcpretty
+after_script:
+  - slather coverage --input-format profdata -x --scheme DirectedGraph-Package DirectedGraph.xcodeproj
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
