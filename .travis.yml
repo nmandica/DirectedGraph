@@ -4,13 +4,15 @@ env:
     
 language: swift
 osx_image: xcode11.5
+install:
+  - gem install xcpretty
+  - gem install slather
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-darwin-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
 script:
-  - swift build
-  - swift test --enable-code-coverage
+  - xcodebuild test -enableCodeCoverage YES -project DirectedGraph.xcodeproj -scheme DirectedGraph-Package | xcpretty
 after_script:
-  - ./cc-test-reporter format-coverage -t gcov -o coverage/codeclimate.json .build/x86_64-apple-macosx/debug/codecov/DirectedGraph.json
-  - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi
+  - slather coverage --input-format profdata -x --scheme DirectedGraph-Package DirectedGraph.xcodeproj
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
