@@ -12,7 +12,7 @@
 SwiftUI package for displaying directed graphs.
 
 <p align="center">
-<img src="./Demo/Media/Example1.png" alt="DirectedGraph example" width="250"/>
+<img src="./Media/Example1.png" alt="DirectedGraph example" width="250"/>
 </p>
 
 ## Installation

@@ -21,6 +21,15 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		03341E2C2486DE0400AAC9A8 /* graph.json in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06CA2486DD71003ED12C /* graph.json */; };
+		03AF06B32486DD45003ED12C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06B22486DD45003ED12C /* AppDelegate.swift */; };
+		03AF06B52486DD45003ED12C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06B42486DD45003ED12C /* SceneDelegate.swift */; };
+		03AF06B92486DD47003ED12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06B82486DD47003ED12C /* Assets.xcassets */; };
+		03AF06BC2486DD47003ED12C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06BB2486DD47003ED12C /* Preview Assets.xcassets */; };
+		03AF06BF2486DD47003ED12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06BD2486DD47003ED12C /* LaunchScreen.storyboard */; };
+		03AF06C52486DD62003ED12C /* DirectedGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */; };
+		03AF06C62486DD62003ED12C /* DirectedGraph.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03AF06CC2486DD71003ED12C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06CB2486DD71003ED12C /* ContentView.swift */; };
 		OBJ_100 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_111 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* XCTestManifests.swift */; };
 		OBJ_112 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ArrayExtensionsTests.swift */; };
@@ -76,9 +85,40 @@
 			remoteGlobalIDString = "DirectedGraph::DirectedGraphTests";
 			remoteInfo = DirectedGraphTests;
 		};
+		03AF06C72486DD62003ED12C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "DirectedGraph::DirectedGraph";
+			remoteInfo = DirectedGraph;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		03AF06C92486DD62003ED12C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				03AF06C62486DD62003ED12C /* DirectedGraph.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		03341E2E2486EAD400AAC9A8 /* Example1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Example1.png; sourceTree = "<group>"; };
+		03AF06B02486DD45003ED12C /* DirectedGraphDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectedGraphDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03AF06B22486DD45003ED12C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		03AF06B42486DD45003ED12C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		03AF06B82486DD47003ED12C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03AF06BB2486DD47003ED12C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		03AF06BE2486DD47003ED12C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		03AF06C02486DD47003ED12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03AF06CA2486DD71003ED12C /* graph.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = graph.json; sourceTree = "<group>"; };
+		03AF06CB2486DD71003ED12C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		"DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DirectedGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DirectedGraph::DirectedGraphTests::Product" /* DirectedGraphTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = DirectedGraphTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* CGPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
@@ -116,7 +156,6 @@
 		OBJ_49 /* CollectionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionsTests.swift; sourceTree = "<group>"; };
 		OBJ_50 /* ComparableExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtensionsTests.swift; sourceTree = "<group>"; };
 		OBJ_52 /* PaletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteTests.swift; sourceTree = "<group>"; };
-		OBJ_56 /* Demo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Demo; sourceTree = SOURCE_ROOT; };
 		OBJ_57 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_58 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -124,6 +163,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		03AF06AD2486DD45003ED12C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03AF06C52486DD62003ED12C /* DirectedGraph.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_118 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
@@ -142,6 +189,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03341E2D2486EAD400AAC9A8 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				03341E2E2486EAD400AAC9A8 /* Example1.png */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		03AF06B12486DD45003ED12C /* DirectedGraphDemo */ = {
+			isa = PBXGroup;
+			children = (
+				03AF06B22486DD45003ED12C /* AppDelegate.swift */,
+				03AF06CB2486DD71003ED12C /* ContentView.swift */,
+				03AF06B42486DD45003ED12C /* SceneDelegate.swift */,
+				03AF06CA2486DD71003ED12C /* graph.json */,
+				03AF06B82486DD47003ED12C /* Assets.xcassets */,
+				03AF06BD2486DD47003ED12C /* LaunchScreen.storyboard */,
+				03AF06C02486DD47003ED12C /* Info.plist */,
+				03AF06BA2486DD47003ED12C /* Preview Content */,
+			);
+			path = DirectedGraphDemo;
+			sourceTree = "<group>";
+		};
+		03AF06BA2486DD47003ED12C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				03AF06BB2486DD47003ED12C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03AF06C42486DD62003ED12C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		OBJ_14 /* Graph */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,18 +309,19 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_42 /* Tests */,
+				03341E2D2486EAD400AAC9A8 /* Media */,
+				03AF06B12486DD45003ED12C /* DirectedGraphDemo */,
 				OBJ_53 /* Products */,
-				OBJ_56 /* Demo */,
 				OBJ_57 /* LICENSE */,
 				OBJ_58 /* README.md */,
+				03AF06C42486DD62003ED12C /* Frameworks */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_51 /* Utilities */ = {
@@ -251,6 +337,7 @@
 			children = (
 				"DirectedGraph::DirectedGraphTests::Product" /* DirectedGraphTests.xctest */,
 				"DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */,
+				03AF06B02486DD45003ED12C /* DirectedGraphDemo.app */,
 			);
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
@@ -282,6 +369,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		03AF06AF2486DD45003ED12C /* DirectedGraphDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03AF06C32486DD47003ED12C /* Build configuration list for PBXNativeTarget "DirectedGraphDemo" */;
+			buildPhases = (
+				03AF06AC2486DD45003ED12C /* Sources */,
+				03AF06AD2486DD45003ED12C /* Frameworks */,
+				03AF06AE2486DD45003ED12C /* Resources */,
+				03AF06C92486DD62003ED12C /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03AF06C82486DD62003ED12C /* PBXTargetDependency */,
+			);
+			name = DirectedGraphDemo;
+			productName = DirectedGraphDemo;
+			productReference = 03AF06B02486DD45003ED12C /* DirectedGraphDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		"DirectedGraph::DirectedGraph" /* DirectedGraph */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = OBJ_61 /* Build configuration list for PBXNativeTarget "DirectedGraph" */;
@@ -336,7 +442,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 9999;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 9999;
+				TargetAttributes = {
+					03AF06AF2486DD45003ED12C = {
+						CreatedOnToolsVersion = 11.5;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "DirectedGraph" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -344,8 +457,9 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_53 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -354,11 +468,36 @@
 				"DirectedGraph::SwiftPMPackageDescription" /* DirectedGraphPackageDescription */,
 				"DirectedGraph::DirectedGraphPackageTests::ProductTarget" /* DirectedGraphPackageTests */,
 				"DirectedGraph::DirectedGraphTests" /* DirectedGraphTests */,
+				03AF06AF2486DD45003ED12C /* DirectedGraphDemo */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		03AF06AE2486DD45003ED12C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03341E2C2486DE0400AAC9A8 /* graph.json in Resources */,
+				03AF06BF2486DD47003ED12C /* LaunchScreen.storyboard in Resources */,
+				03AF06BC2486DD47003ED12C /* Preview Assets.xcassets in Resources */,
+				03AF06B92486DD47003ED12C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		03AF06AC2486DD45003ED12C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03AF06B32486DD45003ED12C /* AppDelegate.swift in Sources */,
+				03AF06B52486DD45003ED12C /* SceneDelegate.swift in Sources */,
+				03AF06CC2486DD71003ED12C /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		OBJ_110 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
@@ -420,6 +559,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		03AF06C82486DD62003ED12C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "DirectedGraph::DirectedGraph" /* DirectedGraph */;
+			targetProxy = 03AF06C72486DD62003ED12C /* PBXContainerItemProxy */;
+		};
 		OBJ_105 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "DirectedGraph::DirectedGraphTests" /* DirectedGraphTests */;
@@ -432,7 +576,142 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		03AF06BD2486DD47003ED12C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				03AF06BE2486DD47003ED12C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		03AF06C12486DD47003ED12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"DirectedGraphDemo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = DirectedGraphDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nmandica.DirectedGraphDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		03AF06C22486DD47003ED12C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_ASSET_PATHS = "\"DirectedGraphDemo/Preview Content\"";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = DirectedGraphDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nmandica.DirectedGraphDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		OBJ_103 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -623,6 +902,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		03AF06C32486DD47003ED12C /* Build configuration list for PBXNativeTarget "DirectedGraphDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03AF06C12486DD47003ED12C /* Debug */,
+				03AF06C22486DD47003ED12C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		OBJ_102 /* Build configuration list for PBXAggregateTarget "DirectedGraphPackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
