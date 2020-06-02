@@ -6,7 +6,7 @@
 <a href="https://codeclimate.com/github/nmandica/DirectedGraph/maintainability"><img src="https://api.codeclimate.com/v1/badges/3033680095c8ffe30f08/maintainability" alt="Maintainability" /></a>
 <img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
 <img src="https://img.shields.io/badge/platform-macOS-blue.svg?style=flat" alt="Platform macOS" />
-<a href="https://raw.githubusercontent.com/xmartlabs/Eureka/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
+<a href="https://github.com/nmandica/DirectedGraph/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/nmandica/DirectedGraph?color=blue"></a>
 </p>
 
 SwiftUI package for displaying directed graphs.
