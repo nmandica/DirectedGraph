@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		03341E2C2486DE0400AAC9A8 /* graph.json in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06CA2486DD71003ED12C /* graph.json */; };
+		03341E312486FE7800AAC9A8 /* NodeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03341E302486FE7800AAC9A8 /* NodeViewModelTests.swift */; };
+		03341E332487003300AAC9A8 /* GraphViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03341E322487003300AAC9A8 /* GraphViewModelTests.swift */; };
 		03AF06B32486DD45003ED12C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06B22486DD45003ED12C /* AppDelegate.swift */; };
 		03AF06B52486DD45003ED12C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06B42486DD45003ED12C /* SceneDelegate.swift */; };
 		03AF06B92486DD47003ED12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06B82486DD47003ED12C /* Assets.xcassets */; };
@@ -110,6 +112,8 @@
 
 /* Begin PBXFileReference section */
 		03341E2E2486EAD400AAC9A8 /* Example1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Example1.png; sourceTree = "<group>"; };
+		03341E302486FE7800AAC9A8 /* NodeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeViewModelTests.swift; sourceTree = "<group>"; };
+		03341E322487003300AAC9A8 /* GraphViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewModelTests.swift; sourceTree = "<group>"; };
 		03AF06B02486DD45003ED12C /* DirectedGraphDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectedGraphDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AF06B22486DD45003ED12C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03AF06B42486DD45003ED12C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +201,15 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
+		03341E2F2486FE5600AAC9A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				03341E302486FE7800AAC9A8 /* NodeViewModelTests.swift */,
+				03341E322487003300AAC9A8 /* GraphViewModelTests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		03AF06B12486DD45003ED12C /* DirectedGraphDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +295,7 @@
 		OBJ_42 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				03341E2F2486FE5600AAC9A8 /* Views */,
 				OBJ_43 /* DirectedGraphTests */,
 				OBJ_45 /* Extensions */,
 				OBJ_51 /* Utilities */,
@@ -502,8 +516,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				03341E312486FE7800AAC9A8 /* NodeViewModelTests.swift in Sources */,
 				OBJ_111 /* XCTestManifests.swift in Sources */,
 				OBJ_112 /* ArrayExtensionsTests.swift in Sources */,
+				03341E332487003300AAC9A8 /* GraphViewModelTests.swift in Sources */,
 				OBJ_113 /* CGPointExtensionsTests.swift in Sources */,
 				OBJ_114 /* CGSizeExtensionsTests.swift in Sources */,
 				OBJ_115 /* CollectionExtensionsTests.swift in Sources */,
