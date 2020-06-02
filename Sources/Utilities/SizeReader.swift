@@ -8,7 +8,7 @@ extension View {
     }
 }
 
-private struct SizeReader<Content: View>: View {
+struct SizeReader<Content: View>: View {
     @Binding var size: CGSize
     let content: () -> Content
     var body: some View {
