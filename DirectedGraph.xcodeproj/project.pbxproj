@@ -109,6 +109,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03341E2E2486EAD400AAC9A8 /* Example1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Example1.png; sourceTree = "<group>"; };
 		03AF06B02486DD45003ED12C /* DirectedGraphDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectedGraphDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AF06B22486DD45003ED12C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03AF06B42486DD45003ED12C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -155,7 +156,6 @@
 		OBJ_49 /* CollectionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionsTests.swift; sourceTree = "<group>"; };
 		OBJ_50 /* ComparableExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtensionsTests.swift; sourceTree = "<group>"; };
 		OBJ_52 /* PaletteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteTests.swift; sourceTree = "<group>"; };
-		OBJ_56 /* Demo */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Demo; sourceTree = SOURCE_ROOT; };
 		OBJ_57 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_58 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -189,6 +189,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03341E2D2486EAD400AAC9A8 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				03341E2E2486EAD400AAC9A8 /* Example1.png */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		03AF06B12486DD45003ED12C /* DirectedGraphDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,9 +315,9 @@
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_42 /* Tests */,
+				03341E2D2486EAD400AAC9A8 /* Media */,
 				03AF06B12486DD45003ED12C /* DirectedGraphDemo */,
 				OBJ_53 /* Products */,
-				OBJ_56 /* Demo */,
 				OBJ_57 /* LICENSE */,
 				OBJ_58 /* README.md */,
 				03AF06C42486DD62003ED12C /* Frameworks */,
