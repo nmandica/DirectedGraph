@@ -12,5 +12,5 @@ script:
   - swift build
   - swift test --enable-code-coverage
 after_script:
-  - ./cc-test-reporter format-coverage -t gcov -o .build/x86_64-apple-macosx/debug/codecov/DirectedGraph.json coverage/codeclimate.json
+  - ./cc-test-reporter format-coverage -t gcov -o coverage/codeclimate.json .build/x86_64-apple-macosx/debug/codecov/DirectedGraph.json
   - if [[ "$TRAVIS_TEST_RESULT" == 0 ]]; then ./cc-test-reporter upload-coverage; fi
