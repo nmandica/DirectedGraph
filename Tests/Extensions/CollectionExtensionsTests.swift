@@ -11,4 +11,12 @@ class CollectionExtensionsTests: XCTestCase {
         
         XCTAssertEqual(average, CGPoint(x: 45, y: 76.5))
     }
+    
+    func testWhenCollectionIsEmptyAveragePointReturnNil() {
+        let array = [CGPoint]()
+        
+        let average = array.averagePoint()
+        
+        XCTAssertNil(average)
+    }
 }
