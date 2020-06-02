@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -24,13 +24,13 @@
 		03341E2C2486DE0400AAC9A8 /* graph.json in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06CA2486DD71003ED12C /* graph.json */; };
 		03341E312486FE7800AAC9A8 /* NodeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03341E302486FE7800AAC9A8 /* NodeViewModelTests.swift */; };
 		03341E332487003300AAC9A8 /* GraphViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03341E322487003300AAC9A8 /* GraphViewModelTests.swift */; };
+		03341E382487066200AAC9A8 /* NodeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03341E372487066100AAC9A8 /* NodeViewTests.swift */; };
+		03341E3E248709EB00AAC9A8 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 03341E3D248709EB00AAC9A8 /* ViewInspector */; };
 		03AF06B32486DD45003ED12C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06B22486DD45003ED12C /* AppDelegate.swift */; };
 		03AF06B52486DD45003ED12C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06B42486DD45003ED12C /* SceneDelegate.swift */; };
 		03AF06B92486DD47003ED12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06B82486DD47003ED12C /* Assets.xcassets */; };
 		03AF06BC2486DD47003ED12C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06BB2486DD47003ED12C /* Preview Assets.xcassets */; };
 		03AF06BF2486DD47003ED12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06BD2486DD47003ED12C /* LaunchScreen.storyboard */; };
-		03AF06C52486DD62003ED12C /* DirectedGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */; };
-		03AF06C62486DD62003ED12C /* DirectedGraph.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03AF06CC2486DD71003ED12C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06CB2486DD71003ED12C /* ContentView.swift */; };
 		OBJ_100 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_111 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* XCTestManifests.swift */; };
@@ -87,33 +87,13 @@
 			remoteGlobalIDString = "DirectedGraph::DirectedGraphTests";
 			remoteInfo = DirectedGraphTests;
 		};
-		03AF06C72486DD62003ED12C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = "DirectedGraph::DirectedGraph";
-			remoteInfo = DirectedGraph;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		03AF06C92486DD62003ED12C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				03AF06C62486DD62003ED12C /* DirectedGraph.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03341E2E2486EAD400AAC9A8 /* Example1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Example1.png; sourceTree = "<group>"; };
 		03341E302486FE7800AAC9A8 /* NodeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeViewModelTests.swift; sourceTree = "<group>"; };
 		03341E322487003300AAC9A8 /* GraphViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewModelTests.swift; sourceTree = "<group>"; };
+		03341E372487066100AAC9A8 /* NodeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeViewTests.swift; sourceTree = "<group>"; };
 		03AF06B02486DD45003ED12C /* DirectedGraphDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectedGraphDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AF06B22486DD45003ED12C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03AF06B42486DD45003ED12C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,7 +151,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03AF06C52486DD62003ED12C /* DirectedGraph.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +159,7 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_119 /* DirectedGraph.framework in Frameworks */,
+				03341E3E248709EB00AAC9A8 /* ViewInspector in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +186,7 @@
 			children = (
 				03341E302486FE7800AAC9A8 /* NodeViewModelTests.swift */,
 				03341E322487003300AAC9A8 /* GraphViewModelTests.swift */,
+				03341E372487066100AAC9A8 /* NodeViewTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -390,12 +371,10 @@
 				03AF06AC2486DD45003ED12C /* Sources */,
 				03AF06AD2486DD45003ED12C /* Frameworks */,
 				03AF06AE2486DD45003ED12C /* Resources */,
-				03AF06C92486DD62003ED12C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				03AF06C82486DD62003ED12C /* PBXTargetDependency */,
 			);
 			name = DirectedGraphDemo;
 			productName = DirectedGraphDemo;
@@ -414,6 +393,8 @@
 			dependencies = (
 			);
 			name = DirectedGraph;
+			packageProductDependencies = (
+			);
 			productName = DirectedGraph;
 			productReference = "DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */;
 			productType = "com.apple.product-type.framework";
@@ -431,6 +412,9 @@
 				OBJ_120 /* PBXTargetDependency */,
 			);
 			name = DirectedGraphTests;
+			packageProductDependencies = (
+				03341E3D248709EB00AAC9A8 /* ViewInspector */,
+			);
 			productName = DirectedGraphTests;
 			productReference = "DirectedGraph::DirectedGraphTests::Product" /* DirectedGraphTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -474,6 +458,9 @@
 				Base,
 			);
 			mainGroup = OBJ_5;
+			packageReferences = (
+				03341E3C248709EB00AAC9A8 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = OBJ_53 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -524,6 +511,7 @@
 				OBJ_114 /* CGSizeExtensionsTests.swift in Sources */,
 				OBJ_115 /* CollectionExtensionsTests.swift in Sources */,
 				OBJ_116 /* ComparableExtensionsTests.swift in Sources */,
+				03341E382487066200AAC9A8 /* NodeViewTests.swift in Sources */,
 				OBJ_117 /* PaletteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,11 +563,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		03AF06C82486DD62003ED12C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "DirectedGraph::DirectedGraph" /* DirectedGraph */;
-			targetProxy = 03AF06C72486DD62003ED12C /* PBXContainerItemProxy */;
-		};
 		OBJ_105 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "DirectedGraph::DirectedGraphTests" /* DirectedGraphTests */;
@@ -656,7 +639,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = DirectedGraphDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nmandica.DirectedGraphDemo;
@@ -716,7 +702,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = DirectedGraphDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nmandica.DirectedGraphDemo;
@@ -752,7 +741,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DirectedGraph.xcodeproj/DirectedGraphTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -777,7 +770,11 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DirectedGraph.xcodeproj/DirectedGraphTests_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -836,7 +833,8 @@
 				SDKROOT = macosx;
 				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) SWIFT_PACKAGE";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				USE_HEADERMAP = NO;
 			};
 			name = Release;
@@ -852,7 +850,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DirectedGraph.xcodeproj/DirectedGraph_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -880,7 +881,10 @@
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DirectedGraph.xcodeproj/DirectedGraph_Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				OTHER_CFLAGS = "$(inherited)";
 				OTHER_LDFLAGS = "$(inherited)";
@@ -973,6 +977,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03341E3C248709EB00AAC9A8 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.11;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03341E3D248709EB00AAC9A8 /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03341E3C248709EB00AAC9A8 /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = OBJ_1 /* Project object */;
 }
