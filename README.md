@@ -31,6 +31,9 @@ You can display a graph by adding a `GraphView` to your view.
 |------------------------|-------------|----------------|------------------------------|
 | DirectedGraph 0.1   | Swift 5.2   | Xcode 11.0   | iOS 13.0 / macOS 10.15  |
 
+## Thanks
+
+- [ViewInspector](https://github.com/nalexn/ViewInspector)
 
 ## License
 
