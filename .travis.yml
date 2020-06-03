@@ -15,4 +15,4 @@ script:
   - xcodebuild test -enableCodeCoverage YES -project DirectedGraph.xcodeproj -scheme DirectedGraph-Package | xcpretty
 after_script:
   - slather coverage --input-format profdata -x --scheme DirectedGraph-Package DirectedGraph.xcodeproj
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - ./cc-test-reporter after-build --prefix $(readlink -f .) --exit-code $TRAVIS_TEST_RESULT
