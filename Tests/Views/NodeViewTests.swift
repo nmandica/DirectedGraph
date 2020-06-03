@@ -5,15 +5,16 @@ import ViewInspector
 
 class NodeViewTests: XCTestCase {
     func testInit() throws {
+        let expectedText = "Test"
         let node = SimpleNode(id: "2", group: 3)
         let viewModel = NodeViewModel(node)
         let view = NodeView(viewModel: viewModel) {
-            Text("Test")
+            Text(expectedText)
         }
         
         let text = try view.inspect().view(SizeReader<Text>.self).zStack().text(0).string()
         
-        XCTAssertEqual(text, "Test")
+        XCTAssertEqual(text, expectedText)
     }
     
     func testPosition() throws {
@@ -21,9 +22,7 @@ class NodeViewTests: XCTestCase {
         let node = SimpleNode(id: "2", group: 3)
         let viewModel = NodeViewModel(node)
         viewModel.position = expectedPosition
-        let view = NodeView(viewModel: viewModel) {
-            Text("Test")
-        }
+        let view = makeView(viewModel)
         
         let position = try view.inspect().view(SizeReader<Text>.self).position()
         
@@ -31,26 +30,30 @@ class NodeViewTests: XCTestCase {
     }
     
     func testDoubleTapToggleInteractive() throws {
-        let expectedPosition = CGPoint(x: 1, y: 10)
         let node = SimpleNode(id: "2", group: 3)
         let viewModel = NodeViewModel(node)
-        viewModel.position = expectedPosition
-        let view = NodeView(viewModel: viewModel) {
-            Text("Test")
-        }
+        let view = makeView(viewModel)
         
-        try view.inspect().view(SizeReader<Text>.self).callOnTapGesture()
+        try view.callOnTapGesture()
         
         XCTAssertEqual(viewModel.interactive, true)
         
-        try view.inspect().view(SizeReader<Text>.self).callOnTapGesture()
+        try view.callOnTapGesture()
         
         XCTAssertEqual(viewModel.interactive, false)
+    }
+    
+    func makeView(_ viewModel: NodeViewModel) -> NodeView<Text> {
+        return NodeView(viewModel: viewModel) {
+            Text("Test")
+        }
     }
 }
 
 extension NodeView: Inspectable where Content == Text {
-    
+    func callOnTapGesture() throws {
+        try inspect().view(SizeReader<Text>.self).callOnTapGesture()
+    }
 }
 
 extension SizeReader: Inspectable where Content == Text {
