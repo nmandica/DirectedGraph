@@ -33,6 +33,8 @@
 		03AF06BC2486DD47003ED12C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06BB2486DD47003ED12C /* Preview Assets.xcassets */; };
 		03AF06BF2486DD47003ED12C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06BD2486DD47003ED12C /* LaunchScreen.storyboard */; };
 		03AF06CC2486DD71003ED12C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06CB2486DD71003ED12C /* ContentView.swift */; };
+		03C9E69B248E72F1007E449A /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C9E69A248E72F1007E449A /* CGSizeExtensions.swift */; };
+		03C9E69E248E7357007E449A /* CGRectExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C9E69C248E732A007E449A /* CGRectExtensionsTests.swift */; };
 		OBJ_100 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_111 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* XCTestManifests.swift */; };
 		OBJ_112 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ArrayExtensionsTests.swift */; };
@@ -44,7 +46,7 @@
 		OBJ_119 /* DirectedGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */; };
 		OBJ_65 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* ArrayExtensions.swift */; };
 		OBJ_66 /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* CGPointExtensions.swift */; };
-		OBJ_67 /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CGSizeExtensions.swift */; };
+		OBJ_67 /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* CGRectExtensions.swift */; };
 		OBJ_68 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* CollectionExtensions.swift */; };
 		OBJ_69 /* ComparableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* ComparableExtensions.swift */; };
 		OBJ_70 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* Edge.swift */; };
@@ -106,10 +108,12 @@
 		03AF06CA2486DD71003ED12C /* graph.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = graph.json; sourceTree = "<group>"; };
 		03AF06CB2486DD71003ED12C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03C9E698248E3D31007E449A /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		03C9E69A248E72F1007E449A /* CGSizeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeExtensions.swift; sourceTree = "<group>"; };
+		03C9E69C248E732A007E449A /* CGRectExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensionsTests.swift; sourceTree = "<group>"; };
 		"DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DirectedGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DirectedGraph::DirectedGraphTests::Product" /* DirectedGraphTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = DirectedGraphTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* CGPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
-		OBJ_11 /* CGSizeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSizeExtensions.swift; sourceTree = "<group>"; };
+		OBJ_11 /* CGRectExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRectExtensions.swift; sourceTree = "<group>"; };
 		OBJ_12 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 		OBJ_13 /* ComparableExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComparableExtensions.swift; sourceTree = "<group>"; };
 		OBJ_15 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
@@ -312,6 +316,7 @@
 			children = (
 				OBJ_46 /* ArrayExtensionsTests.swift */,
 				OBJ_47 /* CGPointExtensionsTests.swift */,
+				03C9E69C248E732A007E449A /* CGRectExtensionsTests.swift */,
 				OBJ_48 /* CGSizeExtensionsTests.swift */,
 				OBJ_49 /* CollectionExtensionsTests.swift */,
 				OBJ_50 /* ComparableExtensionsTests.swift */,
@@ -367,7 +372,8 @@
 			children = (
 				OBJ_9 /* ArrayExtensions.swift */,
 				OBJ_10 /* CGPointExtensions.swift */,
-				OBJ_11 /* CGSizeExtensions.swift */,
+				OBJ_11 /* CGRectExtensions.swift */,
+				03C9E69A248E72F1007E449A /* CGSizeExtensions.swift */,
 				OBJ_12 /* CollectionExtensions.swift */,
 				OBJ_13 /* ComparableExtensions.swift */,
 			);
@@ -547,6 +553,7 @@
 				OBJ_114 /* CGSizeExtensionsTests.swift in Sources */,
 				OBJ_115 /* CollectionExtensionsTests.swift in Sources */,
 				OBJ_116 /* ComparableExtensionsTests.swift in Sources */,
+				03C9E69E248E7357007E449A /* CGRectExtensionsTests.swift in Sources */,
 				03341E382487066200AAC9A8 /* NodeViewTests.swift in Sources */,
 				OBJ_117 /* PaletteTests.swift in Sources */,
 			);
@@ -558,7 +565,7 @@
 			files = (
 				OBJ_65 /* ArrayExtensions.swift in Sources */,
 				OBJ_66 /* CGPointExtensions.swift in Sources */,
-				OBJ_67 /* CGSizeExtensions.swift in Sources */,
+				OBJ_67 /* CGRectExtensions.swift in Sources */,
 				OBJ_68 /* CollectionExtensions.swift in Sources */,
 				OBJ_69 /* ComparableExtensions.swift in Sources */,
 				OBJ_70 /* Edge.swift in Sources */,
@@ -566,6 +573,7 @@
 				OBJ_72 /* Node.swift in Sources */,
 				OBJ_73 /* SimpleEdge.swift in Sources */,
 				OBJ_74 /* SimpleGraph.swift in Sources */,
+				03C9E69B248E72F1007E449A /* CGSizeExtensions.swift in Sources */,
 				OBJ_75 /* SimpleNode.swift in Sources */,
 				OBJ_76 /* CircularLayoutEngine.swift in Sources */,
 				OBJ_77 /* ForceDirectedLayoutEngine.swift in Sources */,
