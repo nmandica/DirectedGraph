@@ -23,27 +23,24 @@ public struct GraphView<NodeContent: View, Graph: DirectedGraph.Graph>: View {
             self.currentOffset = CGSize.zero
         }
         
-        return GeometryReader { geometry in
-            ZStack {
-                ForEach(self.viewModel.edges) { edge in
-                    EdgeView(viewModel: edge)
-                }
-                
-                ForEach(self.viewModel.nodes) { node in
-                    NodeView(viewModel: node) {
-                        self.nodeContent((node.node as? Graph.NodeType)!)
-                    }
+        return ZStack {
+            ForEach(viewModel.edges) { edge in
+                EdgeView(viewModel: edge)
+            }
+            
+            ForEach(viewModel.nodes) { node in
+                NodeView(viewModel: node) {
+                    self.nodeContent((node.node as? Graph.NodeType)!)
                 }
             }
-            .offset(offset)
-            .scaleEffect(self.scale)
-            .frame(width: geometry.size.width, height: geometry.size.height)
-            .contentShape(Rectangle())
-            .gesture(scroll)
-            .scalable(initialScale: self.$scale, scaleRange: CGFloat(0.2)...5)
-            .onAppear {
-                self.viewModel.toggleAutoLayout()
-            }
+        }
+        .offset(offset)
+        .scaleEffect(scale)
+        .contentShape(Rectangle())
+        .gesture(scroll)
+        .scalable(initialScale: self.$scale, scaleRange: CGFloat(0.2)...5)
+        .onAppear {
+            self.viewModel.toggleAutoLayout()
         }
     }
 }

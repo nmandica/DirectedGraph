@@ -35,6 +35,8 @@
 		03AF06CC2486DD71003ED12C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06CB2486DD71003ED12C /* ContentView.swift */; };
 		03C9E69B248E72F1007E449A /* CGSizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C9E69A248E72F1007E449A /* CGSizeExtensions.swift */; };
 		03C9E69E248E7357007E449A /* CGRectExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C9E69C248E732A007E449A /* CGRectExtensionsTests.swift */; };
+		03C9E69F248E831F007E449A /* DirectedGraph.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */; };
+		03C9E6A0248E831F007E449A /* DirectedGraph.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = "DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		OBJ_100 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_111 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* XCTestManifests.swift */; };
 		OBJ_112 /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ArrayExtensionsTests.swift */; };
@@ -90,7 +92,28 @@
 			remoteGlobalIDString = "DirectedGraph::DirectedGraphTests";
 			remoteInfo = DirectedGraphTests;
 		};
+		03C9E6A1248E831F007E449A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "DirectedGraph::DirectedGraph";
+			remoteInfo = DirectedGraph;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03C9E6A3248E831F007E449A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				03C9E6A0248E831F007E449A /* DirectedGraph.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03341E2E2486EAD400AAC9A8 /* Example1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Example1.png; sourceTree = "<group>"; };
@@ -158,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C9E69F248E831F007E449A /* DirectedGraph.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,10 +414,12 @@
 				03AF06AC2486DD45003ED12C /* Sources */,
 				03AF06AD2486DD45003ED12C /* Frameworks */,
 				03AF06AE2486DD45003ED12C /* Resources */,
+				03C9E6A3248E831F007E449A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				03C9E6A2248E831F007E449A /* PBXTargetDependency */,
 			);
 			name = DirectedGraphDemo;
 			productName = DirectedGraphDemo;
@@ -607,6 +633,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		03C9E6A2248E831F007E449A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "DirectedGraph::DirectedGraph" /* DirectedGraph */;
+			targetProxy = 03C9E6A1248E831F007E449A /* PBXContainerItemProxy */;
+		};
 		OBJ_105 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "DirectedGraph::DirectedGraphTests" /* DirectedGraphTests */;

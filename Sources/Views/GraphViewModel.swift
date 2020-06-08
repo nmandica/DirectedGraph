@@ -17,8 +17,6 @@ final public class GraphViewModel<Graph: DirectedGraph.Graph>: ObservableObject 
         edges = Self.buildEdges(graph.edges, nodeViewModels: nodes)
         graphNodes = graph.nodes
         edgeIndices = Self.buildEdgeIndices(graph)
-        
-        computeLayout(engine: RandomLayoutEngine())
     }
     
     public func autoLayout() {
