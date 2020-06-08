@@ -1,0 +1,57 @@
+disabled_rules:
+- trailing_whitespace
+- redundant_string_enum_value
+
+opt_in_rules:
+- empty_count
+- empty_string
+
+excluded:
+- Carthage
+- Pods
+- .build
+- SwiftLint/Common/3rdPartyLib
+- FilmQuiz/SceneDelegate.swift
+- FilmQuiz/AppDelegate.swift
+    
+line_length:
+    error: 250
+    warning: 180
+    ignores_comments: true
+    ignores_function_declarations: true
+    ignores_urls: true
+    
+identifier_name:
+    severity: warning
+    min_length: 1
+    max_length: 40
+    excluded: # excluded via string array
+      - id
+      - URL
+    validates_start_with_lowercase: true
+
+function_body_length:
+    warning: 300
+    error: 500
+
+function_parameter_count:
+    warning: 6
+    error: 8
+
+type_body_length:
+    warning: 300
+    error: 500
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+force_cast: warning # implicitly. Give warning only for force casting
+
+# or they can set both explicitly
+file_length:
+    warning: 500
+    error: 800
+    ignore_comment_only_lines: true
+cyclomatic_complexity:
+    warning: 15
+    error: 25
+
+reporter: "xcode"
