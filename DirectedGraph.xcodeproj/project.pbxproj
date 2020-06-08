@@ -225,6 +225,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		03C9E699248E6989007E449A /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_58 /* README.md */,
+				OBJ_57 /* LICENSE */,
+				OBJ_6 /* Package.swift */,
+				03C9E698248E3D31007E449A /* .swiftlint.yml */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
 		OBJ_14 /* Graph */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,15 +322,12 @@
 		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
-				OBJ_6 /* Package.swift */,
-				03C9E698248E3D31007E449A /* .swiftlint.yml */,
+				03C9E699248E6989007E449A /* Metadata */,
 				OBJ_7 /* Sources */,
 				OBJ_42 /* Tests */,
 				03341E2D2486EAD400AAC9A8 /* Media */,
 				03AF06B12486DD45003ED12C /* DirectedGraphDemo */,
 				OBJ_53 /* Products */,
-				OBJ_57 /* LICENSE */,
-				OBJ_58 /* README.md */,
 				03AF06C42486DD62003ED12C /* Frameworks */,
 			);
 			sourceTree = "<group>";
