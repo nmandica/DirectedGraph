@@ -291,10 +291,10 @@
 		OBJ_42 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				03341E2F2486FE5600AAC9A8 /* Views */,
 				OBJ_43 /* DirectedGraphTests */,
 				OBJ_45 /* Extensions */,
 				OBJ_51 /* Utilities */,
+				03341E2F2486FE5600AAC9A8 /* Views */,
 			);
 			path = Tests;
 			sourceTree = SOURCE_ROOT;
