@@ -6,28 +6,23 @@ opt_in_rules:
 - empty_count
 - empty_string
 
-excluded:
-- Carthage
-- Pods
-- .build
-- SwiftLint/Common/3rdPartyLib
-- FilmQuiz/SceneDelegate.swift
-- FilmQuiz/AppDelegate.swift
-    
+included:
+- Sources/
+
 line_length:
     error: 250
     warning: 180
     ignores_comments: true
     ignores_function_declarations: true
     ignores_urls: true
-    
+
 identifier_name:
     severity: warning
     min_length: 1
     max_length: 40
     excluded: # excluded via string array
-      - id
-      - URL
+        - id
+        - URL
     validates_start_with_lowercase: true
 
 function_body_length:

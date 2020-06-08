@@ -8,7 +8,7 @@ final public class GraphViewModel<Graph: DirectedGraph.Graph>: ObservableObject 
     private(set) var nodes: [NodeViewModel]
     private(set) var edges: [EdgeViewModel]
     let graphNodes: [Graph.NodeType]
-    var willChange = PassthroughSubject<Void,Never>()
+    var willChange = PassthroughSubject<Void, Never>()
     
     var layoutEngine: LayoutEngine = ForceDirectedLayoutEngine()
     
@@ -46,7 +46,7 @@ final public class GraphViewModel<Graph: DirectedGraph.Graph>: ObservableObject 
     }
     
     private static func buildEdges(_ edges: [Edge], nodeViewModels: [NodeViewModel]) -> [EdgeViewModel] {
-        let nodeViewModelLookup = Dictionary(uniqueKeysWithValues: nodeViewModels.map { ($0.id, $0) } )
+        let nodeViewModelLookup = Dictionary(uniqueKeysWithValues: nodeViewModels.map { ($0.id, $0) })
         let viewModels: [EdgeViewModel] = edges.compactMap {
             guard let source = nodeViewModelLookup[$0.source],
                 let target = nodeViewModelLookup[$0.target] else {

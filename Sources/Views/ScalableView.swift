@@ -11,7 +11,7 @@ struct ScalableView<Content: View>: View {
             .scaleEffect(1 + currentAmount / finalAmount)
             .gesture(
                 TapGesture(count: 2)
-                    .onEnded({ (action) in
+                    .onEnded({ _ in
                         self.finalAmount = self.finalAmount != 1.0 ? 1.0 : 2.0
                     }))
             .gesture(
@@ -23,7 +23,7 @@ struct ScalableView<Content: View>: View {
                             self.currentAmount = -self.finalAmount
                         }
                 }
-                .onEnded { amount in
+                .onEnded { _ in
                     self.finalAmount = (self.finalAmount + self.currentAmount).clamped(to: self.scaleRange)
                     self.currentAmount = 0
                 }

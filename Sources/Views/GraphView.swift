@@ -18,7 +18,7 @@ public struct GraphView<NodeContent: View, Graph: DirectedGraph.Graph>: View {
             .onChanged { gesture in
                 self.currentOffset = gesture.translation / self.scale
         }
-        .onEnded { gesture in
+        .onEnded { _ in
             self.finalOffset = offset
             self.currentOffset = CGSize.zero
         }
@@ -30,8 +30,7 @@ public struct GraphView<NodeContent: View, Graph: DirectedGraph.Graph>: View {
                 }
                 
                 ForEach(self.viewModel.nodes) { node in
-                    NodeView(viewModel: node)
-                    {
+                    NodeView(viewModel: node) {
                         self.nodeContent(node.node as! Graph.NodeType)
                     }
                 }
