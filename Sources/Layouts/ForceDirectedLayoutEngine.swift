@@ -11,15 +11,14 @@ struct ForceDirectedLayoutEngine: LayoutEngine {
     var charge: CGFloat = 50
     
     func layout(from currentLayout: Layout,
-                canvasSize: CGSize,
+                canvas: CGRect,
                 edgeIndices: [[Int]]) -> Layout {
-        let count = currentLayout.itemCount
         var positions = currentLayout.items.map { $0.position }
         var velocities = currentLayout.items.map { $0.velocity }
         for _ in 1...steps {
-            var forces = Array(repeating: CGPoint.zero, count: count)
+            var forces = Array(repeating: CGPoint.zero, count: currentLayout.itemCount)
             let edges = edgeIndices.map { $0.map { positions[$0] } }
-            let center = CGPoint(canvasSize.width * 0.5, canvasSize.height * 0.5) - (positions.averagePoint() ?? .zero)
+            let center = canvas.center - (positions.averagePoint() ?? .zero)
             for (index, position) in positions.enumerated() {
                 forces[index] += repulsionForce(at: position, from: positions, skipIndex: index)
                 forces[index] += springForce(at: position, from: edges[index])

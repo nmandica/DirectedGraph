@@ -100,7 +100,7 @@ final public class GraphViewModel<Graph: DirectedGraph.Graph>: ObservableObject 
         })
         
         let layout = engine.layout(from: currentLayout,
-                                   canvasSize: Screen.size,
+                                   canvas: Screen.bounds,
                                    edgeIndices: edgeIndices)
         
         for (index, item) in layout.items.enumerated() {

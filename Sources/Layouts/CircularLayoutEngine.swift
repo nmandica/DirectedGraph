@@ -5,11 +5,11 @@ struct CircularLayoutEngine: LayoutEngine {
     let isIncremental = false
     
     func layout(from currentLayout: Layout,
-                canvasSize: CGSize,
+                canvas: CGRect,
                 edgeIndices: [[Int]]) -> Layout {
         let count = currentLayout.itemCount
-        let radius = min(canvasSize.width, canvasSize.height) * 0.4
-        let center = CGPoint(canvasSize.width * 0.5, canvasSize.height * 0.5)
+        let radius = min(canvas.width, canvas.height) * 0.4
+        let center = canvas.center
         let delta = 2 * CGFloat.pi / CGFloat(count)
         
         var angle = CGFloat(0)
