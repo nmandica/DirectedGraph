@@ -14,8 +14,10 @@ struct Arrow: Shape {
         path.addLine(to: end)
         
         let angle = atan((end.y - start.y) / (end.x - start.x)) + ((end.x - start.x) < 0 ? CGFloat(Double.pi) : 0)
-        let arrowLine1 = CGPoint(x: end.x + pointerLineLength * cos(CGFloat(Double.pi) - angle + arrowAngle), y: end.y - pointerLineLength * sin(CGFloat(Double.pi) - angle + arrowAngle))
-        let arrowLine2 = CGPoint(x: end.x + pointerLineLength * cos(CGFloat(Double.pi) - angle - arrowAngle), y: end.y - pointerLineLength * sin(CGFloat(Double.pi) - angle - arrowAngle))
+        let arrowLine1 = CGPoint(x: end.x + pointerLineLength * cos(CGFloat(Double.pi) - angle + arrowAngle),
+                                 y: end.y - pointerLineLength * sin(CGFloat(Double.pi) - angle + arrowAngle))
+        let arrowLine2 = CGPoint(x: end.x + pointerLineLength * cos(CGFloat(Double.pi) - angle - arrowAngle),
+                                 y: end.y - pointerLineLength * sin(CGFloat(Double.pi) - angle - arrowAngle))
         
         path.move(to: arrowLine1)
         path.addLine(to: end)

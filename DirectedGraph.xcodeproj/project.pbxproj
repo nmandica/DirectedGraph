@@ -105,6 +105,7 @@
 		03AF06C02486DD47003ED12C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03AF06CA2486DD71003ED12C /* graph.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = graph.json; sourceTree = "<group>"; };
 		03AF06CB2486DD71003ED12C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		03C9E698248E3D31007E449A /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		"DirectedGraph::DirectedGraph::Product" /* DirectedGraph.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DirectedGraph.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DirectedGraph::DirectedGraphTests::Product" /* DirectedGraphTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = DirectedGraphTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* CGPointExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
@@ -311,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
+				03C9E698248E3D31007E449A /* .swiftlint.yml */,
 				OBJ_7 /* Sources */,
 				OBJ_42 /* Tests */,
 				03341E2D2486EAD400AAC9A8 /* Media */,
@@ -390,6 +392,7 @@
 			buildPhases = (
 				OBJ_64 /* Sources */,
 				OBJ_94 /* Frameworks */,
+				03C9E697248E3D09007E449A /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -490,6 +493,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03C9E697248E3D09007E449A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03AF06AC2486DD45003ED12C /* Sources */ = {
