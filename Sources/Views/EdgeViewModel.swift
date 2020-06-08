@@ -4,8 +4,8 @@ import Combine
 final class EdgeViewModel: ObservableObject, Identifiable {
     let id: String
     let value: CGFloat
-    @Published var source: NodeViewModel
-    @Published var target: NodeViewModel
+    @Published private var source: NodeViewModel
+    @Published private var target: NodeViewModel
     @Published var showValue = false
     var sourceCancellable: AnyCancellable?
     var targetCancellable: AnyCancellable?
