@@ -68,4 +68,13 @@ class CGPointExtensionsTests: XCTestCase {
         
         XCTAssertEqual(length, 5)
     }
+    
+    func testAngle() {
+        let point = CGPoint(x: 1, y: 1)
+        XCTAssertEqual(point.angle, .pi / 4.0)
+    }
+    
+    func testAngleWhenZeroReturnZero() {
+        XCTAssertEqual(CGPoint.zero.angle, .zero)
+    }
 }

@@ -48,4 +48,9 @@ extension CGPoint {
     var length: CGFloat {
         return lengthSquared.squareRoot()
     }
+    
+    @inlinable
+    var angle: CGFloat {
+        return atan2(y, x)
+    }
 }

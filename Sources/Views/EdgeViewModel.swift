@@ -31,8 +31,8 @@ final class EdgeViewModel: ObservableObject, Identifiable {
     }
     
     var end: CGPoint {
-        let angle = atan((target.position.y - start.y) / (target.position.x - start.x)) +
-            ((target.position.x - start.x) < 0 ? CGFloat(Double.pi) : 0)
+        let delta = target.position - start
+        let angle = delta.angle
         let suppr = CGPoint(x: cos(angle) * (target.size.width + value) * 0.5, y: sin(angle) * (target.size.height + value) * 0.5)
         return target.position - suppr
     }

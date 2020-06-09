@@ -27,6 +27,7 @@
 		03341E382487066200AAC9A8 /* NodeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03341E372487066100AAC9A8 /* NodeViewTests.swift */; };
 		03341E3E248709EB00AAC9A8 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 03341E3D248709EB00AAC9A8 /* ViewInspector */; };
 		03341E402487829400AAC9A8 /* EdgeViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03341E3F2487829400AAC9A8 /* EdgeViewTest.swift */; };
+		0358824D248F8E550084B52C /* EdgeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358824B248F8E460084B52C /* EdgeViewModelTests.swift */; };
 		03AF06B32486DD45003ED12C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06B22486DD45003ED12C /* AppDelegate.swift */; };
 		03AF06B52486DD45003ED12C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AF06B42486DD45003ED12C /* SceneDelegate.swift */; };
 		03AF06B92486DD47003ED12C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03AF06B82486DD47003ED12C /* Assets.xcassets */; };
@@ -121,6 +122,7 @@
 		03341E322487003300AAC9A8 /* GraphViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewModelTests.swift; sourceTree = "<group>"; };
 		03341E372487066100AAC9A8 /* NodeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeViewTests.swift; sourceTree = "<group>"; };
 		03341E3F2487829400AAC9A8 /* EdgeViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeViewTest.swift; sourceTree = "<group>"; };
+		0358824B248F8E460084B52C /* EdgeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgeViewModelTests.swift; sourceTree = "<group>"; };
 		03AF06B02486DD45003ED12C /* DirectedGraphDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DirectedGraphDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AF06B22486DD45003ED12C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03AF06B42486DD45003ED12C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				03341E322487003300AAC9A8 /* GraphViewModelTests.swift */,
 				03341E372487066100AAC9A8 /* NodeViewTests.swift */,
 				03341E3F2487829400AAC9A8 /* EdgeViewTest.swift */,
+				0358824B248F8E460084B52C /* EdgeViewModelTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -577,6 +580,7 @@
 				OBJ_113 /* CGPointExtensionsTests.swift in Sources */,
 				03341E402487829400AAC9A8 /* EdgeViewTest.swift in Sources */,
 				OBJ_114 /* CGSizeExtensionsTests.swift in Sources */,
+				0358824D248F8E550084B52C /* EdgeViewModelTests.swift in Sources */,
 				OBJ_115 /* CollectionExtensionsTests.swift in Sources */,
 				OBJ_116 /* ComparableExtensionsTests.swift in Sources */,
 				03C9E69E248E7357007E449A /* CGRectExtensionsTests.swift in Sources */,
