@@ -85,6 +85,7 @@ final public class GraphViewModel<Graph: DirectedGraph.Graph>: ObservableObject 
             self.willChange.send()
             self.computeLayout(engine: self.layoutEngine)
         }
+        RunLoop.main.add(timer!, forMode: .common)
     }
     
     private func stopLayout() {
