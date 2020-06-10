@@ -10,7 +10,7 @@ final public class GraphViewModel<Graph: DirectedGraph.Graph>: ObservableObject 
     let graphNodes: [Graph.NodeType]
     var willChange = PassthroughSubject<Void, Never>()
     
-    var layoutEngine: LayoutEngine = ForceDirectedLayoutEngine()
+    public var layoutEngine: LayoutEngine = ForceDirectedLayoutEngine()
     
     public init(_ graph: Graph) {
         nodes = Self.buildNodes(graph)

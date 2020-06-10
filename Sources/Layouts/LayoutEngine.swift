@@ -1,10 +1,10 @@
 import SwiftUI
 
 /// A way to compute a graph layout
-protocol LayoutEngine {
+public protocol LayoutEngine {
     var isIncremental: Bool { get }
     
-    func layout(from currentLayout: Layout,
+    func layout(from layout: Layout,
                 canvas: CGRect,
                 edgeIndices: [[Int]]) -> Layout
 }

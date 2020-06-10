@@ -1,13 +1,13 @@
 import SwiftUI
 
 /// A layout engine giving a circular graph
-struct CircularLayoutEngine: LayoutEngine {
-    let isIncremental = false
+public struct CircularLayoutEngine: LayoutEngine {
+    public let isIncremental = false
     
-    func layout(from currentLayout: Layout,
-                canvas: CGRect,
-                edgeIndices: [[Int]]) -> Layout {
-        let count = currentLayout.itemCount
+    public init() { }
+    
+    public func layout(from layout: Layout, canvas: CGRect, edgeIndices: [[Int]]) -> Layout {
+        let count = layout.itemCount
         let radius = min(canvas.width, canvas.height) * 0.4
         let center = canvas.center
         let delta = 2 * CGFloat.pi / CGFloat(count)

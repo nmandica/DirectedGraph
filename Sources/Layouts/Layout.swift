@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct Layout {
+public struct Layout {
     let items: [LayoutItem]
     let itemCount: Int
     

@@ -1,24 +1,24 @@
 import SwiftUI
 
 /// A layout engine giving a force-directed graph
-struct ForceDirectedLayoutEngine: LayoutEngine {
+public struct ForceDirectedLayoutEngine: LayoutEngine {
     private let steps = 3
-    let isIncremental = true
-    var viscosity: CGFloat = 20
-    var friction: CGFloat = 0.7
-    var springLength: CGFloat = 70
-    var stiffness: CGFloat = 0.09
-    var charge: CGFloat = 50
-    var gravitationalConstant = CGFloat(20)
-    var shieldDistanceSquared = CGFloat(250000)
+    public let isIncremental = true
+    public var viscosity: CGFloat = 20
+    public var friction: CGFloat = 0.7
+    public var springLength: CGFloat = 70
+    public var stiffness: CGFloat = 0.09
+    public var charge: CGFloat = 50
+    public var gravitationalConstant: CGFloat = 20
+    public var shieldDistanceSquared: CGFloat = 250000
     
-    func layout(from currentLayout: Layout,
-                canvas: CGRect,
-                edgeIndices: [[Int]]) -> Layout {
-        var positions = currentLayout.items.map { $0.position }
-        var velocities = currentLayout.items.map { $0.velocity }
+    public init() { }
+    
+    public func layout(from layout: Layout, canvas: CGRect, edgeIndices: [[Int]]) -> Layout {
+        var positions = layout.items.map { $0.position }
+        var velocities = layout.items.map { $0.velocity }
         for _ in 1...steps {
-            var forces = Array(repeating: CGPoint.zero, count: currentLayout.itemCount)
+            var forces = Array(repeating: CGPoint.zero, count: layout.itemCount)
             let edges = edgeIndices.map { $0.map { positions[$0] } }
             let center = canvas.center - (positions.averagePoint() ?? .zero)
             for (index, position) in positions.enumerated() {
