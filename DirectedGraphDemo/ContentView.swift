@@ -10,8 +10,8 @@ struct ContentView: View {
             GraphView(viewModel)
             
             HStack {
-                Button("Auto Layout") {
-                    self.viewModel.autoLayout()
+                Button("Release Nodes") {
+                    self.viewModel.releaseNodes()
                 }
                 
                 Spacer()

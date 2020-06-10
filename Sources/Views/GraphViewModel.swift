@@ -19,13 +19,9 @@ final public class GraphViewModel<Graph: DirectedGraph.Graph>: ObservableObject 
         edgeIndices = Self.buildEdgeIndices(graph)
     }
     
-    public func autoLayout() {
+    public func releaseNodes() {
         for node in nodes {
             node.interactive = false
-        }
-        
-        if !layoutEngine.isIncremental {
-            self.computeLayout(engine: layoutEngine)
         }
     }
     
@@ -72,13 +68,13 @@ final public class GraphViewModel<Graph: DirectedGraph.Graph>: ObservableObject 
         return edgeIndices
     }
     
-    private func startLayout() {
+    public func startLayout() {
         guard layoutEngine.isIncremental else {
             self.computeLayout(engine: layoutEngine)
             return
         }
         
-        guard timer == nil else { return }
+        guard !isSimulating else { return }
         
         timer = Timer.scheduledTimer(withTimeInterval: 0.08, repeats: true) { [weak self] _ in
             guard let self = self else { return }
@@ -88,7 +84,9 @@ final public class GraphViewModel<Graph: DirectedGraph.Graph>: ObservableObject 
         RunLoop.main.add(timer!, forMode: .common)
     }
     
-    private func stopLayout() {
+    public func stopLayout() {
+        guard isSimulating else { return }
+        
         timer?.invalidate()
         timer = nil
     }

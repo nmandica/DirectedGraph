@@ -40,7 +40,7 @@ public struct GraphView<NodeContent: View, Graph: DirectedGraph.Graph>: View {
         .gesture(scroll)
         .scalable(initialScale: self.$scale, scaleRange: CGFloat(0.2)...5)
         .onAppear {
-            self.viewModel.toggleAutoLayout()
+            self.viewModel.startLayout()
         }
     }
 }
