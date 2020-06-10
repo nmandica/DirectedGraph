@@ -35,7 +35,7 @@ final public class GraphViewModel<Graph: DirectedGraph.Graph>: ObservableObject 
         }
     }
     
-    func toggleAutoLayout() {
+    public func toggleAutoLayout() {
         isSimulating ? stopLayout() : startLayout()
     }
     
