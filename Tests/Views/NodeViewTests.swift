@@ -4,10 +4,10 @@ import ViewInspector
 @testable import DirectedGraph
 
 class NodeViewTests: XCTestCase {
+    private let viewModel = NodeViewModel(SimpleNode(id: "2", group: 3))
+    
     func testInit() throws {
         let expectedText = "Test"
-        let node = SimpleNode(id: "2", group: 3)
-        let viewModel = NodeViewModel(node)
         let view = NodeView(viewModel: viewModel) {
             Text(expectedText)
         }
@@ -19,8 +19,6 @@ class NodeViewTests: XCTestCase {
     
     func testPosition() throws {
         let expectedPosition = CGPoint(x: 1, y: 10)
-        let node = SimpleNode(id: "2", group: 3)
-        let viewModel = NodeViewModel(node)
         viewModel.position = expectedPosition
         let view = makeView(viewModel)
         
@@ -30,8 +28,6 @@ class NodeViewTests: XCTestCase {
     }
     
     func testDoubleTapToggleInteractive() throws {
-        let node = SimpleNode(id: "2", group: 3)
-        let viewModel = NodeViewModel(node)
         let view = makeView(viewModel)
         
         try view.callOnTapGesture()
