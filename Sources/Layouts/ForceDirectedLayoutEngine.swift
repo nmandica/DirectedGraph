@@ -9,6 +9,8 @@ struct ForceDirectedLayoutEngine: LayoutEngine {
     var springLength: CGFloat = 70
     var stiffness: CGFloat = 0.09
     var charge: CGFloat = 50
+    var gravitationalConstant = CGFloat(20)
+    var shieldDistanceSquared = CGFloat(250000)
     
     func layout(from currentLayout: Layout,
                 canvas: CGRect,
@@ -22,6 +24,7 @@ struct ForceDirectedLayoutEngine: LayoutEngine {
             for (index, position) in positions.enumerated() {
                 forces[index] += repulsionForce(at: position, from: positions, skipIndex: index)
                 forces[index] += springForce(at: position, from: edges[index])
+                forces[index] += centralForce(at: position, from: canvas.center)
                 
                 let nv = velocities[index] + forces[index]
                 let d = nv.length
@@ -57,9 +60,19 @@ struct ForceDirectedLayoutEngine: LayoutEngine {
             guard index != skippedIndex else { continue }
             
             let diff = point - other
-            force += diff / (diff.lengthSquared + 0.00000001) * charge
+            let diffSquared = diff.lengthSquared
+            guard diffSquared < shieldDistanceSquared else {
+                continue
+            }
+            force += diff / (diffSquared + 0.00000001) * charge
         }
         
         return force
+    }
+    
+    private func centralForce(at point: CGPoint, from center: CGPoint) -> CGPoint {
+        let diff = center - point
+        let dist = diff.lengthSquared
+        return dist > shieldDistanceSquared  ? diff / dist * gravitationalConstant : .zero
     }
 }
