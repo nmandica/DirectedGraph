@@ -12,7 +12,9 @@ struct ScalableView<Content: View>: View {
             .gesture(
                 TapGesture(count: 2)
                     .onEnded({ _ in
-                        self.finalAmount = self.finalAmount != 1.0 ? 1.0 : 2.0
+                        withAnimation {
+                            self.finalAmount = self.finalAmount != 1.0 ? 1.0 : 2.0
+                        }
                     }))
             .gesture(
                 MagnificationGesture()
