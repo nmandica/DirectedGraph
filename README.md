@@ -1,7 +1,7 @@
 # DirectedGraph
 
 <p align="center">
-<a href="https://travis-ci.org/nmandica/DirectedGraph"><img src="https://travis-ci.org/nmandica/DirectedGraph.svg?branch=master" alt="Build status" /></a>
+<a href="https://travis-ci.com/nmandica/DirectedGraph"><img src="https://travis-ci.com/nmandica/DirectedGraph.svg?branch=master" alt="Build status" /></a>
 <a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/swift5-compatible-4BC51D.svg?style=flat" alt="Swift 5 compatible" /></a>
 <a href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SwiftPM-compatible-brightgreen.svg?style=flat" alt="SwiftPM compatible" /></a>
 <a href="https://codeclimate.com/github/nmandica/DirectedGraph/maintainability"><img src="https://api.codeclimate.com/v1/badges/3033680095c8ffe30f08/maintainability" alt="Maintainability" /></a>
