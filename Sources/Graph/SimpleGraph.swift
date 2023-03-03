@@ -3,6 +3,11 @@ import Foundation
 public struct SimpleGraph: Graph {
     public var nodes: [SimpleNode]
     public var edges: [SimpleEdge]
+    
+    public init(nodes: [SimpleNode], edges: [SimpleEdge]) {
+        self.nodes = nodes
+        self.edges = edges
+    }
 }
 
 extension SimpleGraph {
