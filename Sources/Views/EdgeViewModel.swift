@@ -24,13 +24,22 @@ final class EdgeViewModel: ObservableObject, Identifiable {
         }
     }
     
-    var middle: CGPoint { (source.position + target.position) / 2 }
+    var middle: CGPoint {
+        guard source.id != target.id else {
+            return CGPoint(
+                cos(Arrow.Constants.circularAngle.radians) * -Arrow.Constants.circularRadius,
+                sin(Arrow.Constants.circularAngle.radians) * -Arrow.Constants.circularRadius)
+            + start
+        }
+        return (source.position + target.position) / 2
+    }
     
     var start: CGPoint {
         source.position
     }
     
-    var end: CGPoint {
+    var end: CGPoint? {
+        guard source.id != target.id else { return nil }
         let delta = target.position - start
         let angle = delta.angle
         let suppr = CGPoint(x: cos(angle) * (target.size.width + value) * 0.5, y: sin(angle) * (target.size.height + value) * 0.5)
