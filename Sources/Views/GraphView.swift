@@ -53,6 +53,7 @@ struct GraphView_Previews: PreviewProvider {
         SimpleNode(id: "4", group: 2)]
     
     private static let edges = [
+        SimpleEdge(source: "1", target: "1", value: 5),
         SimpleEdge(source: "1", target: "2", value: 5),
         SimpleEdge(source: "1", target: "3", value: 1),
         SimpleEdge(source: "3", target: "4", value: 2),

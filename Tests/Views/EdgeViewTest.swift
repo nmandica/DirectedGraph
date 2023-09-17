@@ -21,6 +21,18 @@ class EdgeViewTests: XCTestCase {
         XCTAssertEqual(arrow.end, viewModel.end)
     }
     
+    func testStartAndEndPositionsSelfReferencing() throws {
+        let position1 = CGPoint(x: 10, y: 20)
+        nodeViewModel1.position = position1
+        let viewModel = EdgeViewModel(source: nodeViewModel1, target: nodeViewModel1, value: 40)
+        let view = makeView(viewModel)
+        
+        let arrow = try view.inspect().zStack().view(Arrow.self, 0).actualView()
+        
+        XCTAssertEqual(arrow.start, position1)
+        XCTAssertEqual(arrow.end, viewModel.end)
+    }
+    
     func testWhenShowValueDisplayText() throws {
         let viewModel = EdgeViewModel(source: nodeViewModel1, target: nodeViewModel2, value: 40)
         viewModel.showValue = true

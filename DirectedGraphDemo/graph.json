@@ -21,6 +21,7 @@
         {"source": "A", "target": "E", "value": 4},
         {"source": "A", "target": "F", "value": 4},
         {"source": "A", "target": "G", "value": 6},
+        {"source": "B", "target": "B", "value": 3},
         {"source": "G", "target": "G1", "value": 4},
         {"source": "G", "target": "G2", "value": 4},
         {"source": "G", "target": "G3", "value": 4},
