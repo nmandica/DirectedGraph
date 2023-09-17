@@ -27,10 +27,10 @@ struct Arrow: Shape {
         } else {
             path.move(to: start)
             let startAngle = Constants.circularAngle
-            let endAngle = Constants.circularAngle + .degrees(45)
+            let endAngle = startAngle + .degrees(45)
             let startPoint = CGPoint(
-                cos(Constants.circularAngle.radians) * -Constants.circularRadius,
-                sin(Constants.circularAngle.radians) * -Constants.circularRadius)
+                cos(startAngle.radians) * -Constants.circularRadius,
+                sin(startAngle.radians) * -Constants.circularRadius)
             + start
             
             path.addArc(

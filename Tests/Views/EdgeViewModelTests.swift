@@ -11,8 +11,13 @@ class EdgeViewModelTests: XCTestCase {
         targetNode.position = CGPoint(25, 40)
         
         let viewModel = EdgeViewModel(source: sourceNode, target: targetNode, value: .zero)
-        
-        XCTAssertFalse(viewModel.end.x.isNaN)
+        XCTAssertNotNil(viewModel.end)
+        XCTAssertFalse(viewModel.end!.x.isNaN)
+    }
+    
+    func testEndIsNilWhenSourceAndTargetAreSameNode() {
+        let viewModel = EdgeViewModel(source: sourceNode, target: sourceNode, value: .zero)
+        XCTAssertNil(viewModel.end)
     }
     
     func testSourceChangeTriggerEdgeChange() {
