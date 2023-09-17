@@ -57,7 +57,7 @@ struct GraphView_Previews: PreviewProvider {
         SimpleEdge(source: "1", target: "2", value: 5),
         SimpleEdge(source: "1", target: "3", value: 1),
         SimpleEdge(source: "3", target: "4", value: 2),
-        SimpleEdge(source: "2", target: "3", value: 1),
+        SimpleEdge(source: "2", target: "3", value: 1)
     ]
     
     static var previews: some View {

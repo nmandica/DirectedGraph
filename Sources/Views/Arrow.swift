@@ -2,10 +2,10 @@ import SwiftUI
 
 struct Arrow: Shape {
     enum Constants {
-        static let pointerLineLength: CGFloat = 15
+        static let pointerLineLength: CGFloat = 30
         static let arrowAngle = CGFloat(Double.pi / 6)
-        static let circularAngle: Angle = .degrees(45)
-        static var circularRadius: CGFloat { pointerLineLength * 2 }
+        static let circularAngle: Angle = .degrees(90)
+        static var circularRadius: CGFloat { pointerLineLength * 1.25 }
     }
 
     let start: CGPoint
@@ -39,7 +39,8 @@ struct Arrow: Shape {
                 startAngle: startAngle,
                 endAngle: endAngle,
                 clockwise: true)
-            angle = (endAngle - .degrees(80)).radians
+            // not quite tangential to endAngle because of curvature
+            angle = (endAngle - .degrees(75)).radians
             lineEnd = path.currentPoint ?? start
         }
 
